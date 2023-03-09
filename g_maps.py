@@ -2,7 +2,7 @@ import googlemaps
 import urllib.parse
 
 # Set up a client using your service key
-client = googlemaps.Client(key='AIzaSyCA2ANehQLMvu4GACPQ4EAdZQRtDOPIoH8')
+client = googlemaps.Client(key='mybrkey')
 
 # Use the client to get the latitude and longitude of the city you want to display on the map
 geocode_result = client.geocode('Lviv, Ukraine')
@@ -11,7 +11,7 @@ lng = geocode_result[0]['geometry']['location']['lng']
 
 # Create a URL to request the embedded map using your browser key
 params = {
-    'key': 'AIzaSyAxj0NipAHm3cEiVcj0LuUJHygrrzI5Dpw',
+    'key': 'myservkey',
     'center': f'{lat},{lng}',
     'zoom': 12,
 }
